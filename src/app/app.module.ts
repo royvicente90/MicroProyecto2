@@ -21,7 +21,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ListpelisComponent } from './components/listpelis/listpelis.component'
+import { ListpelisComponent } from './components/listpelis/listpelis.component';
+import { FlexModule } from '@angular/flex-layout';
+import { PostcardComponent } from './components/postcard/postcard.component';
+import { SelectedpostComponent } from './components/selectedpost/selectedpost.component';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -31,6 +35,8 @@ import { ListpelisComponent } from './components/listpelis/listpelis.component'
     HomeComponent,
     RegisterComponent,
     ListpelisComponent,
+    PostcardComponent,
+    SelectedpostComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,8 +55,9 @@ import { ListpelisComponent } from './components/listpelis/listpelis.component'
     MatIconModule,
     FormsModule,
     BrowserAnimationsModule,
+    FlexModule,
   ],
-  providers: [FirebaseService],
+  providers: [AuthService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
